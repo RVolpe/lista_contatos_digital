@@ -44,8 +44,8 @@ class HelperDB(
     fun buscarContatos(busca: String, isBuscaPorID: Boolean = false) : List<ContatosVO> {
         val db = readableDatabase ?: return mutableListOf()
         var lista = mutableListOf<ContatosVO>()
-        var where: String? = null
-        var args: Array<String> = arrayOf()
+        var where: String
+        var args: Array<String>
 
         if(isBuscaPorID){
             where = "$COLUMNS_ID = ?"

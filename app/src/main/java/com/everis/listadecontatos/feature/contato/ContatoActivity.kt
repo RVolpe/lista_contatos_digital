@@ -62,7 +62,8 @@ class ContatoActivity : AppCompatActivity() {
         }).start()
     }
 
-    fun onClickExcluirContato(view: View) {
+    fun onClickExcluirContato() {
+        // parameter tirado: (view: View)
         if(idContato > -1){
             progress.visibility = View.VISIBLE
             Thread(Runnable {
